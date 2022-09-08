@@ -219,9 +219,7 @@ return packer.startup(function(use)
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   -- use "martinsione/darkplus.nvim"
   -- use "navarasu/onedark.nvim"
-  use({
-    "catppuccin/nvim",
-  })
+  use { "catppuccin/nvim", as = "catppuccin" }
   use {
     "projekt0n/github-nvim-theme",
     tag = "v0.0.4",
@@ -270,7 +268,7 @@ return packer.startup(function(use)
 
   -- tools
   -- use "cdelledonne/vim-cmake"
-  use "aserowy/tmux.nvim"   -- NOTE: 可能造成卡顿
+  -- use "aserowy/tmux.nvim"   -- NOTE: 可能造成卡顿
   use "ravenxrz/neovim-cmake"
   use {
     "skanehira/preview-markdown.vim",
@@ -291,7 +289,7 @@ return packer.startup(function(use)
   --}
   use { 'michaelb/sniprun', run = 'bash ./install.sh' }
   -- use "ravenxrz/DoxygenToolkit.vim"
-  use "Pocco81/AutoSave.nvim"
+  -- use "Pocco81/AutoSave.nvim"
   use "djoshea/vim-autoread"
   -- use "chipsenkbeil/distant.nvim"
 

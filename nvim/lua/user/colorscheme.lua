@@ -4,16 +4,16 @@ require ("user.themes.github-nvim-theme")
 require ("user.themes.catppuccin")
 
 -- cursor color: #61AFEF
-local colorscheme = "catppuccin"
--- local colorscheme = "darkplus"
+-- local colorscheme = "catppuccin"
+--local colorscheme = "darkplus"
 -- local colorscheme = "github_light"
 -- require "user.conf.github-nvim-theme"
 
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
-if not status_ok then
-  vim.notify("colorscheme " .. colorscheme .. " not found!")
-  return
-end
+vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
+
+require("catppuccin").setup()
+
+vim.cmd [[colorscheme catppuccin]]
 
 -- if colorscheme == "onedark" then
 --   require "user.themes.onedark"
